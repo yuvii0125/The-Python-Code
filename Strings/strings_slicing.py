@@ -13,7 +13,6 @@ b = "Python"
 print(b[0])
 #it gives only one output
 
-#Slicing with skipping values
 
 c = "Python"
 print(c[0:3:2])
@@ -28,4 +27,3 @@ print(d[::2])
 #here we are skipping 2 characters and starting from 0th index and ending at end of string
 
 e = "Python"
-print(e[:])
