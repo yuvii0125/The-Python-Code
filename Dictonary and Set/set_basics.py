@@ -8,7 +8,7 @@ print(type(s))
 
 print(e) #{1, 2, 3, 4, 6, 7, 8} or {1, 2, 3, 4, 7,8,6} can be anything 
 #set do not repeat values
-
+#sets are mutable
 # Sets can contain immutable (hashable) data types. Common immutable types include:
 # Numbers: int, float, etc.
 # Strings: e.g., "hello"
