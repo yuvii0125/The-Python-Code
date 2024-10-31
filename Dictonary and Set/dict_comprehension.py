@@ -25,3 +25,8 @@ print(stock_dict)
 odd_cubes = {x: x**3 for x in range(21) if x % 2 != 0}
 print("\nOdd Cubes Dictionary:")
 print(odd_cubes)
+
+
+#alphabet to ASCII value
+char_to_ascii = {char: ord(char) for char in "abcdefghijklmnopqrstuvwxyz"}
+print(char_to_ascii)
