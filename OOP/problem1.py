@@ -1,5 +1,5 @@
-#Create student class that can take name and marks as arguments in constructor Then create a
-#method to print the average of marks
+#Create student class that can take name and marks as arguments in constructor 
+# Then create a method to print the average of marks
 
 class Student:
     def __init__(self, name,marks):
