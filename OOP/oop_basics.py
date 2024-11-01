@@ -1,7 +1,6 @@
 #class is a entity 
 #Object is instance of class 
 
-
 #constructor is called when object is created
 
 #The data stored inside the class is called attributes
