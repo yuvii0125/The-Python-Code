@@ -1,30 +1,35 @@
-# This class defines the blueprint for a generic car
-class Car:
-    def __init__(self, type):
-        # Initialize the car's type attribute
-        self.type = type
+class Animal:
+    def __init__(self, name, species):
+        self.name = name  # Instance variable for the name
+        self.species = species  # Instance variable for the species
 
-    @staticmethod
-    def start():
-        # Static method to simulate starting a car (common functionality)
-        print("Car is started..")
+    def sound(self):
+        return "Some generic animal sound"
 
-    @staticmethod
-    def stop():
-        # Static method to simulate stopping a car (common functionality)
-        print("Car is stopped..")
+    def describe(self):
+        # Calling super().__init__ to invoke the parent constructor
+        return f"{self.name} is a {self.species}"
 
-# This class inherits from the Car class to represent a specific Toyota car
-class ToyotaCar(Car):
-    def __init__(self, name, type):
-        # Initialize the ToyotaCar's name attribute
-        self.name = name
 
-        # Call the parent class __init__ method using super() to initialize the type attribute
-        super().__init__(type)
+class Dog(Animal):
+    def __init__(self, name, breed):
+        # Calling the parent class constructor using super()
+        super().__init__(name, species="Dog")
+        self.breed = breed  # Additional attribute for breed
 
-# Create an instance of ToyotaCar
-car1 = ToyotaCar("prius", "sedan")
+    def sound(self):
+        # Overriding the sound method and using super() to call the parent class method
+        parent_sound = super().sound()
+        return f"{parent_sound} and barks"
 
-# Print the car type
-print(car1.type)
+    def describe(self):
+        # Overriding the describe method
+        parent_description = super().describe()
+        return f"{parent_description}. Breed: {self.breed}"
+
+
+# Testing the Dog class
+dog = Dog(name="Buddy", breed="Golden Retriever")
+
+print(dog.sound())       # Output: Some generic animal sound and barks
+print(dog.describe())    # Output: Buddy is a Dog. Breed: Golden Retriever
