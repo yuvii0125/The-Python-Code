@@ -1,0 +1,2 @@
+I am learning python now
+Next I have to learn pandas and numpy
